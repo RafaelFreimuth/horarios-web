@@ -1,0 +1,52 @@
+<mat-toolbar style="background-color: #3cba70;">
+    <mat-toolbar-row>
+        <span style="color: white;">Sorteador de Horários</span>
+        <span class="example-spacer"></span>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user
+        </mat-icon>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="div-form">
+    <form class="example-form" [formGroup]="dadosForm" name="formSorteio">
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Quantidade de horários</mat-label>
+
+          <input 
+            matInput 
+            type="number" 
+            min="1" 
+            max="5" 
+            formControlName="qtdDeHorarios"
+            name="qtdDeHorarios"
+            autofocus
+            isRequired="true"
+           >
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Quantidade de sorteios</mat-label>
+            
+            <input 
+                matInput 
+                type="number" 
+                min="1" 
+                max="5" 
+                formControlName="qtdSorteios"
+                name="qtdSorteios"
+            >
+        </mat-form-field>
+
+        <button 
+            mat-raised-button 
+            color="primary"
+            [disabled]=""
+            (click)="sortear()"
+            [disabled]="!dadosForm.valid">
+            Sortear
+        </button>
+    </form>
+</div>
+
+        
