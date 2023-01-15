@@ -42,7 +42,7 @@ import { SorteioDialogComponent } from './home/sorteio-dialog/sorteio-dialog.com
   providers: [
     {
       provide: APP_BASE_HREF, 
-      useValue: '/app'}
+      useValue: '/'}
   ],
 
   bootstrap: [AppComponent]
