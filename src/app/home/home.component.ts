@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { SorteadorService } from '../services/sorteador.service';
-import { Sorteio } from '../shared/model/sorteio.model';
 import { SorteioDialogComponent } from './sorteio-dialog/sorteio-dialog.component';
 
 @Component({
